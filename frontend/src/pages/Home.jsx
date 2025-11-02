@@ -1,5 +1,6 @@
 import React from "react";
 import { FaArrowRight } from "react-icons/fa6";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
@@ -15,12 +16,15 @@ const Home = () => {
       <div className="flex items-end h-full">
         <div className="bg-white relative z-10 w-full px-3 pt-6 pb-20">
           <h3 className="text-2xl font-bold mb-5">Get started with Uber</h3>
-          <button className="bg-black cursor-pointer text-white flex justify-center items-center gap-2 py-3 w-[95%] mx-auto text-xl rounded-md">
+          <Link
+            to={"/login"}
+            className="bg-black cursor-pointer text-white flex justify-center items-center gap-2 py-3 w-[95%] mx-auto text-xl rounded-md"
+          >
             <span>Continue</span>
             <span>
               <FaArrowRight />
             </span>
-          </button>
+          </Link>
         </div>
       </div>
     </div>
