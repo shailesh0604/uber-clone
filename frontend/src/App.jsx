@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React from "react";
 import "./app.css";
 import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
@@ -9,9 +9,12 @@ import CaptainSignup from "./pages/CaptainSignup";
 import Welcome from "./pages/Welcome";
 import { UserDataContext } from "./context/UserContext";
 import SessionWrapper from "./pages/SessionWrapper";
+import UserLogout from "./pages/UserLogout";
+import CaptainWelcome from "./pages/CaptainWelcome";
+import CaptainSessionWrapper from "./pages/CaptainSessionWrapper";
+import CaptainLogout from "./pages/CaptainLogout";
 
 const App = () => {
-  const ans = useContext(UserDataContext);
   return (
     <div>
       <Routes>
@@ -26,6 +29,30 @@ const App = () => {
             <SessionWrapper>
               <Welcome />
             </SessionWrapper>
+          }
+        />
+        <Route
+          path="/users/logout"
+          element={
+            <SessionWrapper>
+              <UserLogout />
+            </SessionWrapper>
+          }
+        />
+        <Route
+          path="/captain-welcome"
+          element={
+            <CaptainSessionWrapper>
+              <CaptainWelcome />
+            </CaptainSessionWrapper>
+          }
+        />
+        <Route
+          path="/captains/logout"
+          element={
+            <CaptainSessionWrapper>
+              <CaptainLogout />
+            </CaptainSessionWrapper>
           }
         />
       </Routes>

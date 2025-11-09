@@ -117,9 +117,9 @@ const UserSignup = () => {
         </p>
 
         {/* Captain Signup Button */}
-        <button className="w-full mt-6 bg-green-600 text-white py-2 rounded-md hover:bg-green-700 transition">
+        <Link to={"/captain-login"} className="w-full mt-6 block text-center bg-green-600 text-white py-2 rounded-md hover:bg-green-700 transition">
           Sign in as Captain
-        </button>
+        </Link>
       </div>
     </div>
   );
